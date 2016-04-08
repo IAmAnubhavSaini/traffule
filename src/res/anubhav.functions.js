@@ -13,22 +13,22 @@ points.constructor.prototype.distance = distance;
 points.distance();
 */
 
-var distance = function(){
-var pt1 = points[0];
+var distance = function() {
+  var pt1 = points[0];
 
-var pt2 = points[1];
+  var pt2 = points[1];
 
-var ax = (pt1[0]===undefined) ? pt1.x : pt1[0];
+  var ax = (pt1[0] === undefined) ? pt1.x : pt1[0];
 
-var bx = (pt2[0] === undefined) ? pt2.x : pt2[0];
+  var bx = (pt2[0] === undefined) ? pt2.x : pt2[0];
 
-var ay = (pt1[1] === undefined) ? pt1.y : pt1[1];
+  var ay = (pt1[1] === undefined) ? pt1.y : pt1[1];
 
-var by = (pt2[1] === undefined) ? pt2.y : pt2[1];
+  var by = (pt2[1] === undefined) ? pt2.y : pt2[1];
 
-var dx = ax-bx
+  var dx = ax - bx
 
-var dy = ay-by;
+  var dy = ay - by;
 
-return Math.sqrt(dx*dx + dy*dy)
+  return Math.sqrt(dx * dx + dy * dy)
 }
