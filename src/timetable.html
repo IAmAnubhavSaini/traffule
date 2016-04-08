@@ -13,29 +13,7 @@
   <link rel="stylesheet" type="text/css" href="res/traffule.app.css" />
   <link rel="stylesheet" type="text/css" href="res/traffule.app.timetable.css" />
   <script src="res/jquery-1.9.1.min.js"></script>
-  <script>
-    //set language
-        function setEnglish() {
-            localStorage.setItem('Language', 'English');
-            pageRefresh(); //belongs to anubhav.functions.js
-        }
-        function setHindi() {
-            localStorage.setItem('Language', 'Hindi');
-            pageRefresh();
-        }
-        function getLanguage() {
-            return localStorage.getItem('Language');
-        }
-
-        $(function () {
-            if (!localStorage) {
-                alert('Your browser is old! get a new one like latest google chrome or latest firefox; otherwise this site won\'t work great for you.');
-            }
-            if (localStorage.getItem('Language') === undefined) {
-                setHindi();
-            }
-        });
-  </script>
+  <script src="res/scripts/languageSetup.js"></script>
 </head>
 
 <body>
