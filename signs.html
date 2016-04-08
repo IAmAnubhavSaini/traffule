@@ -1,595 +1,526 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <title>traffule traffic signs page</title>
-    <link rel="stylesheet" type="text/css" href="res/reset.css" />
-    <link rel="stylesheet" type="text/css" href="res/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="res/font/font-awesome.min.css" />
-    <!--[if ie] 
-        <link rel="stylesheet" type="text/css" href="res/font/font-awesome-ie7.min.css" /> -->
-    <link rel="stylesheet" type="text/css" href="res/anubhav.widgets.css" />
-    <link rel="stylesheet" type="text/css" href="res/traffule.app.css" />
-    <link rel="stylesheet" type="text/css" href="res/traffule.app.signs.css" />
-    <script src="res/jquery-1.9.1.min.js"></script>
-    <script>
-        //set language
-        function setEnglish() {
-            localStorage.setItem('Language', 'English');
-            pageRefresh(); //belongs to anubhav.functions.js
-        }
-        function setHindi() {
-            localStorage.setItem('Language', 'Hindi');
-            pageRefresh();
-        }
-        function getLanguage() {
-            return localStorage.getItem('Language');
-        }
-
-        $(function () {
-            if (!localStorage) {
-                alert('Your browser is old! get a new one like latest google chrome or latest firefox; otherwise this site won\'t work great for you.');
-            }
-            if (localStorage.getItem('Language') === undefined) {
-                setHindi();
-            }
-        });
-
-    </script>
+  <meta charset="utf-8" />
+  <title>traffule traffic signs page</title>
+  <link rel="stylesheet" type="text/css" href="res/styles/reset.css" />
+  <link rel="stylesheet" type="text/css" href="res/styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="res/styles/font/font-awesome.min.css" />
+  <!--[if ie] 
+        <link rel="stylesheet" type="text/css" href="res/styles/font/font-awesome-ie7.min.css" /> -->
+  <link rel="stylesheet" type="text/css" href="res/styles/anubhav.widgets.css" />
+  <link rel="stylesheet" type="text/css" href="res/styles/traffule.app.css" />
+  <link rel="stylesheet" type="text/css" href="res/styles/traffule.app.signs.css" />
+  <script src="res/scripts/jquery-1.9.1.min.js" defer></script>
+  <script src="res/scripts/languageSetup.js" defer></script>
 </head>
+
 <body>
 
-    <header class="site-head">
-        <h1>traffule</h1>
-    </header>
-    <section class="site-nav">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="signs.html">Signs</a>
-            <a href="markings.html">Markings</a>
-            <a href="timetable.html">Time table</a>
-        </nav>
-    </section>
-    <section class="site-data">
-        <div class="all-signs">
+  <header class="site-head">
+    <h1>traffule</h1>
+  </header>
+  <section class="site-nav">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="signs.html">Signs</a>
+      <a href="markings.html">Markings</a>
+      <a href="timetable.html">Time table</a>
+    </nav>
+  </section>
+  <section class="site-data">
+    <div class="all-signs">
 
-           <div class="signContainer">
-                        <div class="signs StopAndGiveWay" id="StopAndGiveWay" data-alternate-name="Yield"
-                            data-caption="Stop and Give way">
-                            <img src="img/1.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs GiveWay" id="GiveWay" data-alternate-name="Yield" data-caption="Give way">
-                            <img src="img/2.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoEntry" id="NoEntry" data-alternate-name="Restricted Path" data-caption="No Entry">
-                            <img src="img/3.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer" id="NoMotorContainer">
-                        <div class="signs NoMotor" id="NoMotor" data-alternate-name="No motorised vehicle"
-                            data-caption="No Motor Vehicle">
-                            <img src="img/4.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer" id="HeightLimitContainer">
-                        <div class="signs HeightLimit" id="HeightLimit" data-alternate-name="Height Limit"
-                            data-caption="Maximum height">
-                            <img src="img/5.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs WidthLimit" id="WidthLimit" data-alternate-name="Width Limit" data-caption="Maximum width">
-                            <img src="img/6.png" />
-                        </div>
-
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs WeightLimit" id="WeightLimit" data-alternate-name="Load Limit"
-                            data-caption="Maximum weight">
-                            <img src="img/7.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs AxleWeightLimit" id="AxleWeightLimit" data-alternate-name="Axle Load Limit"
-                            data-caption="Maximum axle load">
-                            <img src="img/8.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoParking" id="NoParking" data-alternate-name="" data-caption="No parking">
-                            <img src="img/9.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs Parking" id="Parking" data-alternate-name="park here" data-caption="Parking">
-                            <img src="img/10.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs StopPass" id="StopPass" data-alternate-name="No passing without stopping"
-                            data-caption="Stop, then pass">
-                            <img src="img/11.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoOvertaking" id="NoOvertaking" data-alternate-name="No passing, No overtaking, no passing from right"
-                            data-caption="No overtaking">
-                            <img src="img/12.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoHeavyVehicle" id="NoHeavyVehicle" data-alternate-name="No heavy vehicle, no trucks"
-                            data-caption="No heavy vehicles">
-                            <img src="img/13.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoRightTurn" id="NoRightTurn" data-alternate-name="" data-caption="No right turn">
-                            <img src="img/14.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoHandCart" id="NoHandCart" data-alternate-name="No hand carts"
-                            data-caption="No hand carts">
-                            <img src="img/15.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoAnimalDrawnCart" id="NoAnimalDrawnCart" data-alternate-name="No animal drawn vehcles"
-                            data-caption="No animal drawn carts">
-                            <img src="img/16.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoLeftTurn" id="NoLeftTurn" data-alternate-name="" data-caption="No left turn">
-                            <img src="img/17.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoRightUTurn" id="NoRightUTurn" data-alternate-name="No U turn, No right U turn"
-                            data-caption="No U turn">
-                            <img src="img/18.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoLeftUTurn" id="NoLeftUTurn" data-alternate-name="No U turn, No left U turn"
-                            data-caption="No U turn">
-                            <img src="img/19.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoHorn" id="NoHorn" data-alternate-name="No horn, No honking, Silent zone"
-                            data-caption="No horn">
-                            <img src="img/20.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs SpeedLimit" id="SpeedLimit" data-alternate-name="Speed Limit" data-caption="Maximum speed">
-                            <img src="img/21.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs EndSpeedLimit" id="EndSpeedLimit" data-alternate-name="End of speed limit, End of speed restriction"
-                            data-caption="End of speed limit">
-                            <img src="img/22.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs TempStopSign" id="TempStopSign" data-alternate-name="Temporary stop sign"
-                            data-caption="Temporary stop">
-                            <img src="img/23.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs TempGoSign" id="TempGoSign" data-alternate-name="Temporary go sign"
-                            data-caption="Temporary go">
-                            <img src="img/24.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RestrictionEnds" id="RestrictionEnds" data-alternate-name="Previous restriction ends except speed limit"
-                            data-caption="Restriction ends">
-                            <img src="img/25.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs TurnLeft" id="TurnLeft" data-alternate-name="" data-caption="Turn left">
-                            <img src="img/26.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs TurnRight" id="TurnRight" data-alternate-name="" data-caption="Turn right">
-                            <img src="img/27.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoStopping" id="NoStopping" data-alternate-name="" data-caption="No stopping">
-                            <img src="img/28.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs AheadOnly" id="AheadOnly" data-alternate-name="" data-caption="Ahead only">
-                            <img src="img/29.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs KeepLeft" id="KeepLeft" data-alternate-name="" data-caption="Keep left">
-                            <img src="img/30.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs KeepRight" id="KeepRight" data-alternate-name="" data-caption="Keep right">
-                            <img src="img/31.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RightTurnAhead" id="RightTurnAhead" data-alternate-name="" data-caption="Right turn ahead">
-                            <img src="img/32.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs LeftTurnAhead" id="LeftTurnAhead" data-alternate-name="" data-caption="Left turn ahead">
-                            <img src="img/33.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs SmallRoundAboutRight" id="SmallRoundAboutRight" data-alternate-name="Give way to vehicles from right"
-                            data-caption="Small round about">
-                            <img src="img/34.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs SmallRoundAboutLeft" id="SmallRoundAboutLeft" data-alternate-name="Give way to vehicles from left"
-                            data-caption="Small round about">
-                            <img src="img/35.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs OneWayTraffic" id="OneWayTraffic" data-alternate-name="" data-caption="One way traffic">
-                            <img src="img/36.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs CrossRoad" id="CrossRoad" data-alternate-name="Cross, Crossing roads"
-                            data-caption="Cross road">
-                            <img src="img/37.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs MajorCrossRoad" id="MajorCrossRoad" data-alternate-name="Major road ahead,Major cross road"
-                            data-caption="Major road ahead">
-                            <img src="img/38.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RightBranch" id="RightBranch" data-alternate-name="" data-caption="Branch on right ahead">
-                            <img src="img/39.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs LeftBranch" id="LeftBranch" data-alternate-name="" data-caption="Branch on left ahead">
-                            <img src="img/40.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs StaggardJunction" id="StaggardJunction" data-alternate-name=""
-                            data-caption="Left and right side roads ahead">
-                            <img src="img/41.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs YJunction" id="YJunction" data-alternate-name="No straight road ahead"
-                            data-caption="Y Junction">
-                            <img src="img/42.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs TrafficMergeFromLeft" id="TrafficMergeFromLeft" data-alternate-name="Traffic merges from left"
-                            data-caption="Merging traffic from left">
-                            <img src="img/43.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs TrafficMergeFromRight" id="TrafficMergeFromRight" data-alternate-name="Traffic merges form right"
-                            data-caption="Merging traffic from right">
-                            <img src="img/44.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RoundAbout" id="RoundAbout" data-alternate-name="Round about" data-caption="Round about">
-                            <img src="img/45.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs SharpBendToRight" id="SharpBendToRight" data-alternate-name="Sharp bend to the right"
-                            data-caption="Sharp bend to right">
-                            <img src="img/46.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs SharpBendToLeft" id="SharpBendToLeft" data-alternate-name="Sharp bend to the left"
-                            data-caption="Sharp bend to left">
-                            <img src="img/47.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs HairpinBendToRight" id="HairpinBendToRight" data-alternate-name="U turn to right, hairpin bend to right"
-                            data-caption="Hairpin bend to right">
-                            <img src="img/48.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs HairpinBendToLeft" id="HairpinBendToLeft" data-alternate-name="U turn to left, hairpin bend to left"
-                            data-caption="Hairpin bend to left">
-                            <img src="img/49.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs DoubleBendFirstLeft" id="DoubleBendFirstLeft" data-alternate-name="Double bend first left"
-                            data-caption="Double bend, first left">
-                            <img src="img/50.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs DoubleBendFirstRight" id="DoubleBendFirstRight" data-alternate-name="Double bend first right"
-                            data-caption="Double bend, first right">
-                            <img src="img/51.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NarrowRoadsBoth" id="NarrowRoadsBoth" data-alternate-name="Both roads are narrow ahead"
-                            data-caption="Narrow roads">
-                            <img src="img/52.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RightRoadNarrows" id="RightRoadNarrows" data-alternate-name=""
-                            data-caption="Road narrows on right">
-                            <img src="img/53.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs LeftRoadNarrows" id="LeftRoadNarrows" data-alternate-name="" data-caption="Road narrows on left">
-                            <img src="img/54.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs DualCarriagewayEnds" id="DualCarriagewayEnds" data-alternate-name="Dual road end"
-                            data-caption="Dual carriageway ends">
-                            <img src="img/55.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs TrafficSignals" id="TrafficSignals" data-alternate-name="" data-caption="Traffic signals">
-                            <img src="img/56.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs SteepHillDownwards" id="SteepHillDownwards" data-alternate-name=""
-                            data-caption="Steep hill downwards">
-                            <img src="img/57.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs SteepHillUpwards" id="SteepHillUpwards" data-alternate-name=""
-                            data-caption="Steep hill upwards">
-                            <img src="img/58.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs TwoWayTrafficStraightAhead" id="TwoWayTrafficStraightAhead" data-alternate-name=""
-                            data-caption="Two way traffic straight">
-                            <img src="img/59.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs TwoWayTrafficCrossesAhead" id="TwoWayTrafficCrossesAhead" data-alternate-name=""
-                            data-caption="Two way traffic cross">
-                            <img src="img/60.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs PedestrianWalking" id="PedestrianWalking" data-alternate-name=""
-                            data-caption="Pedestrian walking">
-                            <img src="img/61.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs PedestrianInRoad" id="PedestrianInRoad" data-alternate-name=""
-                            data-caption="Pedestrian in road ahead">
-                            <img src="img/62.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs Children" id="Children" data-alternate-name="" data-caption="Children ahead">
-                            <img src="img/63.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs Cattle" id="Cattle" data-alternate-name="" data-caption="Cattle ahead">
-                            <img src="img/64.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs WildAnimals" id="WildAnimals" data-alternate-name="" data-caption="Wild animals ahead">
-                            <img src="img/65.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RiverBank" id="RiverBank" data-alternate-name="" data-caption="River bank ahead">
-                            <img src="img/66.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs UnevenRoad" id="UnevenRoad" data-alternate-name="Bumps ahead" data-caption="Uneven road ahead">
-                            <img src="img/67.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs SlipperyRoad" id="SlipperyRoad" data-alternate-name="" data-caption="Slippery road ahead">
-                            <img src="img/68.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RoadHump" id="RoadHump" data-alternate-name="Road has humps and bumps"
-                            data-caption="Road humps ahead">
-                            <img src="img/69.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs LowFlyingAircraft" id="LowFlyingAircraft" data-alternate-name="Plane flying at low altitude"
-                            data-caption="Low flying zone">
-                            <img src="img/70.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs FallingRocks" id="FallingRocks" data-alternate-name="" data-caption="Falling rocks zone">
-                            <img src="img/71.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs DangerousDip" id="DangerousDip" data-alternate-name="" data-caption="Dangerous dip">
-                            <img src="img/72.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NarrowBridge" id="NarrowBridge" data-alternate-name="" data-caption="Narrow bridge ahead">
-                            <img src="img/73.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs Danger" id="Danger" data-alternate-name="" data-caption="Danger ahead">
-                            <img src="img/74.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs CheckPoint" id="CheckPoint" data-alternate-name="" data-caption="Checkpoint ahead">
-                            <img src="img/75.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RoadWorks" id="RoadWorks" data-alternate-name="" data-caption="Men at work">
-                            <img src="img/76.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs LooseChippings" id="LooseChippings" data-alternate-name="" data-caption="Debris, loose chippings">
-                            <img src="img/77.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RailwayCrossingWOGate" id="RailwayCrossingWOGate" data-alternate-name="Railway crossing without gate or barrier"
-                            data-caption="No barrier railway crossings">
-                            <img src="img/78.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RailwayCrossingWGate" id="RailwayCrossingWGate" data-alternate-name="Railway crossing with gate or barrier"
-                            data-caption="Gated railway crossings">
-                            <img src="img/79.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs NoThroughRoad" id="NoThroughRoad" data-alternate-name="Straight road ends ahead"
-                            data-caption="No through road">
-                            <img src="img/80.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs PedestrianCrossing" id="PedestrianCrossing" data-alternate-name="Pedestrian crossing ahead"
-                            data-caption="Pedestrian crossing">
-                            <img src="img/81.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs ParkingPlace" id="ParkingPlace" data-alternate-name="" data-caption="Parking place">
-                            <img src="img/82.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs OvertakingSection" id="OvertakingSection" data-alternate-name=""
-                            data-caption="Overtaking section">
-                            <img src="img/83.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs FillingStation" id="FillingStation" data-alternate-name="" data-caption="Filling station">
-                            <img src="img/84.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs BreakdownService" id="BreakdownService" data-alternate-name=""
-                            data-caption="Breakdown service">
-                            <img src="img/85.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs TelephoneService" id="TelephoneService" data-alternate-name=""
-                            data-caption="Telephone service">
-                            <img src="img/86.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs OvernightAccomodation" id="OvernightAccomodation" data-alternate-name=""
-                            data-caption="Overnight accomodation">
-                            <img src="img/87.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs FirstAidService" id="FirstAidService" data-alternate-name="" data-caption="First aid service">
-                            <img src="img/88.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs HospitalService" id="HospitalService" data-alternate-name="" data-caption="Hospital service">
-                            <img src="img/89.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RefreshmentsService" id="RefreshmentsService" data-alternate-name=""
-                            data-caption="Refreshment service">
-                            <img src="img/90.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RestaurentService" id="RestaurentService" data-alternate-name=""
-                            data-caption="Restaurent service">
-                            <img src="img/91.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs PicnicSite" id="PicnicSite" data-alternate-name="" data-caption="Picnic site">
-                            <img src="img/92.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RoutePedsCyclist" id="RoutePedsCyclist" data-alternate-name=""
-                            data-caption="Route for pedestrians and cyclists">
-                            <img src="img/93.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RoutePeds" id="RoutePeds" data-alternate-name="" data-caption="Route for Pedestrians">
-                            <img src="img/94.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs RouteCyclist" id="RouteCyclist" data-alternate-name="" data-caption="Route for cyclists">
-                            <img src="img/95.png" />
-                        </div>
-                    </div>
-                    <div class="signContainer">
-                        <div class="signs BusStop" id="BusStop" data-alternate-name="" data-caption="Bus stop">
-                            <img src="img/96.png" />
-                        </div>
-                    </div>
+      <div class="signContainer">
+        <div class="signs StopAndGiveWay" id="StopAndGiveWay" data-alternate-name="Yield" data-caption="Stop and Give way">
+          <img src="img/1.png" />
         </div>
-        <script type="text/javascript">
-            //deals with the data-caption and hover signs
+      </div>
+      <div class="signContainer">
+        <div class="signs GiveWay" id="GiveWay" data-alternate-name="Yield" data-caption="Give way">
+          <img src="img/2.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoEntry" id="NoEntry" data-alternate-name="Restricted Path" data-caption="No Entry">
+          <img src="img/3.png" />
+        </div>
+      </div>
+      <div class="signContainer" id="NoMotorContainer">
+        <div class="signs NoMotor" id="NoMotor" data-alternate-name="No motorised vehicle" data-caption="No Motor Vehicle">
+          <img src="img/4.png" />
+        </div>
+      </div>
+      <div class="signContainer" id="HeightLimitContainer">
+        <div class="signs HeightLimit" id="HeightLimit" data-alternate-name="Height Limit" data-caption="Maximum height">
+          <img src="img/5.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs WidthLimit" id="WidthLimit" data-alternate-name="Width Limit" data-caption="Maximum width">
+          <img src="img/6.png" />
+        </div>
+
+      </div>
+      <div class="signContainer">
+        <div class="signs WeightLimit" id="WeightLimit" data-alternate-name="Load Limit" data-caption="Maximum weight">
+          <img src="img/7.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs AxleWeightLimit" id="AxleWeightLimit" data-alternate-name="Axle Load Limit" data-caption="Maximum axle load">
+          <img src="img/8.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoParking" id="NoParking" data-alternate-name="" data-caption="No parking">
+          <img src="img/9.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs Parking" id="Parking" data-alternate-name="park here" data-caption="Parking">
+          <img src="img/10.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs StopPass" id="StopPass" data-alternate-name="No passing without stopping" data-caption="Stop, then pass">
+          <img src="img/11.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoOvertaking" id="NoOvertaking" data-alternate-name="No passing, No overtaking, no passing from right"
+        data-caption="No overtaking">
+          <img src="img/12.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoHeavyVehicle" id="NoHeavyVehicle" data-alternate-name="No heavy vehicle, no trucks" data-caption="No heavy vehicles">
+          <img src="img/13.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoRightTurn" id="NoRightTurn" data-alternate-name="" data-caption="No right turn">
+          <img src="img/14.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoHandCart" id="NoHandCart" data-alternate-name="No hand carts" data-caption="No hand carts">
+          <img src="img/15.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoAnimalDrawnCart" id="NoAnimalDrawnCart" data-alternate-name="No animal drawn vehcles" data-caption="No animal drawn carts">
+          <img src="img/16.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoLeftTurn" id="NoLeftTurn" data-alternate-name="" data-caption="No left turn">
+          <img src="img/17.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoRightUTurn" id="NoRightUTurn" data-alternate-name="No U turn, No right U turn" data-caption="No U turn">
+          <img src="img/18.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoLeftUTurn" id="NoLeftUTurn" data-alternate-name="No U turn, No left U turn" data-caption="No U turn">
+          <img src="img/19.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoHorn" id="NoHorn" data-alternate-name="No horn, No honking, Silent zone" data-caption="No horn">
+          <img src="img/20.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs SpeedLimit" id="SpeedLimit" data-alternate-name="Speed Limit" data-caption="Maximum speed">
+          <img src="img/21.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs EndSpeedLimit" id="EndSpeedLimit" data-alternate-name="End of speed limit, End of speed restriction" data-caption="End of speed limit">
+          <img src="img/22.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs TempStopSign" id="TempStopSign" data-alternate-name="Temporary stop sign" data-caption="Temporary stop">
+          <img src="img/23.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs TempGoSign" id="TempGoSign" data-alternate-name="Temporary go sign" data-caption="Temporary go">
+          <img src="img/24.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RestrictionEnds" id="RestrictionEnds" data-alternate-name="Previous restriction ends except speed limit"
+        data-caption="Restriction ends">
+          <img src="img/25.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs TurnLeft" id="TurnLeft" data-alternate-name="" data-caption="Turn left">
+          <img src="img/26.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs TurnRight" id="TurnRight" data-alternate-name="" data-caption="Turn right">
+          <img src="img/27.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoStopping" id="NoStopping" data-alternate-name="" data-caption="No stopping">
+          <img src="img/28.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs AheadOnly" id="AheadOnly" data-alternate-name="" data-caption="Ahead only">
+          <img src="img/29.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs KeepLeft" id="KeepLeft" data-alternate-name="" data-caption="Keep left">
+          <img src="img/30.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs KeepRight" id="KeepRight" data-alternate-name="" data-caption="Keep right">
+          <img src="img/31.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RightTurnAhead" id="RightTurnAhead" data-alternate-name="" data-caption="Right turn ahead">
+          <img src="img/32.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs LeftTurnAhead" id="LeftTurnAhead" data-alternate-name="" data-caption="Left turn ahead">
+          <img src="img/33.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs SmallRoundAboutRight" id="SmallRoundAboutRight" data-alternate-name="Give way to vehicles from right" data-caption="Small round about">
+          <img src="img/34.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs SmallRoundAboutLeft" id="SmallRoundAboutLeft" data-alternate-name="Give way to vehicles from left" data-caption="Small round about">
+          <img src="img/35.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs OneWayTraffic" id="OneWayTraffic" data-alternate-name="" data-caption="One way traffic">
+          <img src="img/36.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs CrossRoad" id="CrossRoad" data-alternate-name="Cross, Crossing roads" data-caption="Cross road">
+          <img src="img/37.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs MajorCrossRoad" id="MajorCrossRoad" data-alternate-name="Major road ahead,Major cross road" data-caption="Major road ahead">
+          <img src="img/38.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RightBranch" id="RightBranch" data-alternate-name="" data-caption="Branch on right ahead">
+          <img src="img/39.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs LeftBranch" id="LeftBranch" data-alternate-name="" data-caption="Branch on left ahead">
+          <img src="img/40.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs StaggardJunction" id="StaggardJunction" data-alternate-name="" data-caption="Left and right side roads ahead">
+          <img src="img/41.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs YJunction" id="YJunction" data-alternate-name="No straight road ahead" data-caption="Y Junction">
+          <img src="img/42.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs TrafficMergeFromLeft" id="TrafficMergeFromLeft" data-alternate-name="Traffic merges from left" data-caption="Merging traffic from left">
+          <img src="img/43.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs TrafficMergeFromRight" id="TrafficMergeFromRight" data-alternate-name="Traffic merges form right" data-caption="Merging traffic from right">
+          <img src="img/44.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RoundAbout" id="RoundAbout" data-alternate-name="Round about" data-caption="Round about">
+          <img src="img/45.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs SharpBendToRight" id="SharpBendToRight" data-alternate-name="Sharp bend to the right" data-caption="Sharp bend to right">
+          <img src="img/46.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs SharpBendToLeft" id="SharpBendToLeft" data-alternate-name="Sharp bend to the left" data-caption="Sharp bend to left">
+          <img src="img/47.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs HairpinBendToRight" id="HairpinBendToRight" data-alternate-name="U turn to right, hairpin bend to right"
+        data-caption="Hairpin bend to right">
+          <img src="img/48.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs HairpinBendToLeft" id="HairpinBendToLeft" data-alternate-name="U turn to left, hairpin bend to left" data-caption="Hairpin bend to left">
+          <img src="img/49.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs DoubleBendFirstLeft" id="DoubleBendFirstLeft" data-alternate-name="Double bend first left" data-caption="Double bend, first left">
+          <img src="img/50.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs DoubleBendFirstRight" id="DoubleBendFirstRight" data-alternate-name="Double bend first right" data-caption="Double bend, first right">
+          <img src="img/51.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NarrowRoadsBoth" id="NarrowRoadsBoth" data-alternate-name="Both roads are narrow ahead" data-caption="Narrow roads">
+          <img src="img/52.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RightRoadNarrows" id="RightRoadNarrows" data-alternate-name="" data-caption="Road narrows on right">
+          <img src="img/53.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs LeftRoadNarrows" id="LeftRoadNarrows" data-alternate-name="" data-caption="Road narrows on left">
+          <img src="img/54.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs DualCarriagewayEnds" id="DualCarriagewayEnds" data-alternate-name="Dual road end" data-caption="Dual carriageway ends">
+          <img src="img/55.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs TrafficSignals" id="TrafficSignals" data-alternate-name="" data-caption="Traffic signals">
+          <img src="img/56.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs SteepHillDownwards" id="SteepHillDownwards" data-alternate-name="" data-caption="Steep hill downwards">
+          <img src="img/57.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs SteepHillUpwards" id="SteepHillUpwards" data-alternate-name="" data-caption="Steep hill upwards">
+          <img src="img/58.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs TwoWayTrafficStraightAhead" id="TwoWayTrafficStraightAhead" data-alternate-name="" data-caption="Two way traffic straight">
+          <img src="img/59.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs TwoWayTrafficCrossesAhead" id="TwoWayTrafficCrossesAhead" data-alternate-name="" data-caption="Two way traffic cross">
+          <img src="img/60.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs PedestrianWalking" id="PedestrianWalking" data-alternate-name="" data-caption="Pedestrian walking">
+          <img src="img/61.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs PedestrianInRoad" id="PedestrianInRoad" data-alternate-name="" data-caption="Pedestrian in road ahead">
+          <img src="img/62.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs Children" id="Children" data-alternate-name="" data-caption="Children ahead">
+          <img src="img/63.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs Cattle" id="Cattle" data-alternate-name="" data-caption="Cattle ahead">
+          <img src="img/64.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs WildAnimals" id="WildAnimals" data-alternate-name="" data-caption="Wild animals ahead">
+          <img src="img/65.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RiverBank" id="RiverBank" data-alternate-name="" data-caption="River bank ahead">
+          <img src="img/66.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs UnevenRoad" id="UnevenRoad" data-alternate-name="Bumps ahead" data-caption="Uneven road ahead">
+          <img src="img/67.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs SlipperyRoad" id="SlipperyRoad" data-alternate-name="" data-caption="Slippery road ahead">
+          <img src="img/68.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RoadHump" id="RoadHump" data-alternate-name="Road has humps and bumps" data-caption="Road humps ahead">
+          <img src="img/69.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs LowFlyingAircraft" id="LowFlyingAircraft" data-alternate-name="Plane flying at low altitude" data-caption="Low flying zone">
+          <img src="img/70.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs FallingRocks" id="FallingRocks" data-alternate-name="" data-caption="Falling rocks zone">
+          <img src="img/71.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs DangerousDip" id="DangerousDip" data-alternate-name="" data-caption="Dangerous dip">
+          <img src="img/72.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NarrowBridge" id="NarrowBridge" data-alternate-name="" data-caption="Narrow bridge ahead">
+          <img src="img/73.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs Danger" id="Danger" data-alternate-name="" data-caption="Danger ahead">
+          <img src="img/74.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs CheckPoint" id="CheckPoint" data-alternate-name="" data-caption="Checkpoint ahead">
+          <img src="img/75.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RoadWorks" id="RoadWorks" data-alternate-name="" data-caption="Men at work">
+          <img src="img/76.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs LooseChippings" id="LooseChippings" data-alternate-name="" data-caption="Debris, loose chippings">
+          <img src="img/77.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RailwayCrossingWOGate" id="RailwayCrossingWOGate" data-alternate-name="Railway crossing without gate or barrier"
+        data-caption="No barrier railway crossings">
+          <img src="img/78.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RailwayCrossingWGate" id="RailwayCrossingWGate" data-alternate-name="Railway crossing with gate or barrier"
+        data-caption="Gated railway crossings">
+          <img src="img/79.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs NoThroughRoad" id="NoThroughRoad" data-alternate-name="Straight road ends ahead" data-caption="No through road">
+          <img src="img/80.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs PedestrianCrossing" id="PedestrianCrossing" data-alternate-name="Pedestrian crossing ahead" data-caption="Pedestrian crossing">
+          <img src="img/81.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs ParkingPlace" id="ParkingPlace" data-alternate-name="" data-caption="Parking place">
+          <img src="img/82.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs OvertakingSection" id="OvertakingSection" data-alternate-name="" data-caption="Overtaking section">
+          <img src="img/83.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs FillingStation" id="FillingStation" data-alternate-name="" data-caption="Filling station">
+          <img src="img/84.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs BreakdownService" id="BreakdownService" data-alternate-name="" data-caption="Breakdown service">
+          <img src="img/85.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs TelephoneService" id="TelephoneService" data-alternate-name="" data-caption="Telephone service">
+          <img src="img/86.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs OvernightAccomodation" id="OvernightAccomodation" data-alternate-name="" data-caption="Overnight accomodation">
+          <img src="img/87.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs FirstAidService" id="FirstAidService" data-alternate-name="" data-caption="First aid service">
+          <img src="img/88.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs HospitalService" id="HospitalService" data-alternate-name="" data-caption="Hospital service">
+          <img src="img/89.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RefreshmentsService" id="RefreshmentsService" data-alternate-name="" data-caption="Refreshment service">
+          <img src="img/90.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RestaurentService" id="RestaurentService" data-alternate-name="" data-caption="Restaurent service">
+          <img src="img/91.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs PicnicSite" id="PicnicSite" data-alternate-name="" data-caption="Picnic site">
+          <img src="img/92.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RoutePedsCyclist" id="RoutePedsCyclist" data-alternate-name="" data-caption="Route for pedestrians and cyclists">
+          <img src="img/93.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RoutePeds" id="RoutePeds" data-alternate-name="" data-caption="Route for Pedestrians">
+          <img src="img/94.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs RouteCyclist" id="RouteCyclist" data-alternate-name="" data-caption="Route for cyclists">
+          <img src="img/95.png" />
+        </div>
+      </div>
+      <div class="signContainer">
+        <div class="signs BusStop" id="BusStop" data-alternate-name="" data-caption="Bus stop">
+          <img src="img/96.png" />
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      //deals with the data-caption and hover signs
             $(function () {
                 $('.signs img').mouseover(function () {
                     var _cap = getLanguage() == "English" ? "_caption" : "_caption_hi";
@@ -602,10 +533,9 @@
                     $(this).parent().tooltip('hide');
                 });
             });
-
-        </script>
-        <script type="text/javascript">
-            //This fetches allSigns.js and allSigns_hi.js file
+    </script>
+    <script type="text/javascript">
+      //This fetches allSigns.js and allSigns_hi.js file
             //then saves almost all the data in localStorage
             $(function () {
 
@@ -641,27 +571,23 @@
                 });
 
             });
-
-        </script>
-
-
-
-    </section>
-    <footer class="site-foot">
-        &copy; 2012 - 2013 anubhav saini
-    </footer>
-    <section>
-        <div id="tt"></div>
-    </section>
-
-    <script src="res/jquery-ui-1.9.1.min.js"></script>
-    <script src="res/bootstrap.min.js"></script>
-    <script src="res/anubhav.functions.js"></script>
-    <script src="res/anubhav.widgets.js"></script>
-    <script>
-        $(function () {
-            $('#tt').TopTaker({ 'theme': 'dark', 'text': ' back to top', 'iconClass': 'icon-circle-arrow-up icon-white ' });
-        });
     </script>
+
+
+
+  </section>
+  <footer class="site-foot">
+    &copy; 2012 - 2013 anubhav saini
+  </footer>
+  <section>
+    <div id="tt"></div>
+  </section>
+
+  <script src="res/scripts/jquery-ui-1.9.1.min.js" defer></script>
+  <script src="res/scripts/bootstrap.min.js" defer></script>
+  <script src="res/scripts/anubhav.functions.js" defer></script>
+  <script src="res/scripts/anubhav.widgets.js" defer></script>
+  <script src="res/scripts/executeWidgets.js" defer></script>
 </body>
+
 </html>
