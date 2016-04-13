@@ -39,7 +39,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "build": "grunt build",
+    "nuke": "rm -rf node_modules; rm -rf .build; npm install; grunt build"
   },
   "pre-commit": [ "test" ]
 }
