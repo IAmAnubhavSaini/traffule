@@ -5,16 +5,16 @@
     --accent: orange;
     --black: #333;
     --white: #eee;
-    --gold: goldenrod;
+    --orange: #ffcf56;
     --accent-t: rgba(255, 0, 0, 0.3);
 
     --logo-bgc: var(--black);
-    --logo-bgc-hover: var(--gold);
+    --logo-bgc-hover: var(--orange);
 
-    --logo-c: var(--gold);
+    --logo-c: var(--orange);
     --logo-c-hover: var(--black);
 
-    --navigation-a-bgc-hover: #007cff;
+    --navigation-a-bgc-hover: #007;
     --navigation-a-c-hover: var(--white);
 
     --navigation-a-border: thin solid var(--accent);
