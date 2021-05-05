@@ -1,0 +1,38 @@
+.site-data .all-signs {
+    min-width: 600px;
+    padding: 40px initial;
+    margin: auto;
+    text-align: center;
+    counter-reset: signs;
+}
+
+.signs {
+    height: 226px;
+    width: 226px;
+    border-radius: 113px;
+    margin: auto;
+    
+}
+
+    .signs::before {
+        display: block;
+        content: counter(signs)'.';
+        position: relative;
+        left: -180px;
+        font-size: 25px;
+        background-color: #0094ff;
+        color: white;
+        height: 80px;
+        width: 50px;
+        text-align: center;
+        line-height: 80px;
+    }
+    .signs img {
+        position: relative;
+        top: -70px;
+    }
+.signContainer {
+    background-color: white;
+    counter-increment: signs;
+    margin: 100px auto;
+}
