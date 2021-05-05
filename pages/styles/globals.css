@@ -5,7 +5,7 @@
     --accent: orange;
     --black: #333;
     --white: #eee;
-    --orange: #ffcf56;
+    --orange: #fabe2d;
     --accent-t: rgba(255, 0, 0, 0.3);
 
     --logo-bgc: var(--black);
@@ -17,7 +17,7 @@
     --navigation-a-bgc-hover: #007;
     --navigation-a-c-hover: var(--white);
 
-    --navigation-a-border: thin solid var(--accent);
+    --navigation-a-border: thick solid var(--accent);
     --navigation-a-border-hover: thick solid var(--accent);
 
     --updown-margin: 1rem 0;
@@ -123,11 +123,11 @@ ol.hz li a {
 .navigation ol.hz li a {
     text-decoration: none;
     padding: 1rem;
-    border-bottom: var(--navigation-a-border);
+    border-left: var(--navigation-a-border);
 }
 
 .navigation ol.hz li a:hover {
-    border-bottom: var(--navigation-a-border-hover);
+    border-left: var(--navigation-a-border-hover);
     background-color: var(--navigation-a-bgc-hover);
     color: var(--navigation-a-c-hover);
 }
@@ -143,7 +143,7 @@ ol.hz li a {
     padding: .3rem;
     width: 100%;
     border: none;
-    border-bottom: thin solid var(--accent);
+    border: thin solid var(--accent);
 }
 
 .search-bar .search-input:focus {

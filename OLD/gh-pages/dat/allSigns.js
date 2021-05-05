@@ -45,7 +45,6 @@
       , "signDescription": "Vehicles must not be parked on the road as described on the sign."
       , "signCaption": "No parking zone"
     },
-
     {
       "signName": "StopPass"
       , "signDescription": "Stop completely before passing through."
