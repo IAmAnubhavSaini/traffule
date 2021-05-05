@@ -1,5 +1,5 @@
 export default function Markings() {
     return (
-        <>Markings</>
+        <h3>Markings</h3>
     );
 }

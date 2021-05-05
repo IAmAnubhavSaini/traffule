@@ -1,7 +1,5 @@
 export default function Signs() {
     return (
-        <>
-            Signs
-        </>
+        <h3>Signs</h3>
     );
 }
