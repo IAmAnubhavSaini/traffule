@@ -1,10 +1,14 @@
 import allSigns, {SignT} from "../public/data/allSigns";
-import styled from "styled-components";
+import allSigns_hi from "../public/data/allSigns_hi";
+import styled from 'styled-components';
+import {useState} from "react";
+import Toggle from 'react-toggle';
 
-const StyledSigns = styled.div`
+const StyledSignsContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 5vw;
+  grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+  grid-gap: 2vw;
+  text-align: center;
 
   @media (max-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -16,42 +20,96 @@ const StyledSigns = styled.div`
   div.sign {
     text-align: center;
     border: thin solid var(--black);
-    padding: .2em;
+    padding: .2vh .2vw;
     counter-increment: signs;
-  }
+    position: relative;
 
-  div.sign::before {
-    content: counter(signs);
+    &::before {
+      content: counter(signs);
+      background-color: black;
+      color: white;
+      width: 2vw;
+      display: inline-block;
+      top: -1vh;
+      position: relative;
+      border: thin solid black;
+      border-radius: 0 0 50% 50%;
+      padding: 1vh 0;
+      z-index: 100;
+    }
   }
 
   img {
-    height: 180px;
+    display: block;
+    min-height: 200px;
+    height: 20vh;
+    margin: 3vh 1vw;
+    padding: 1vh 1vw;
+  }
+
+  p.description {
+    text-align: left;
   }
 `;
 
 const StyledCaption = styled.div`
-  margin: .2em;
-  padding: .2em;
-  font-size: 2em;
+  padding: 1vh 0;
+  width: 100%;
+  font-size: 1rem;
   background-color: var(--black);
   color: var(--white);
   font-weight: bold;
 `;
 
-export default function Signs() {
-    return (
-        <StyledSigns>
-            {
-                allSigns.signs.map((sign: SignT, index: number) => {
-                    return <div className={"sign"} key={`sign-${index}-${sign.signName}`}>
-                        <StyledCaption>{sign.signCaption}</StyledCaption>
-                        <img src={`img/${index + 1}.png`} alt={sign.signDescription} title={sign.signDescription}/>
-                        <p>{sign.signDescription}</p>
-                    </div>;
-                })
-            }
+const StyledLanguageControl = styled.div`
+  margin: 3vh 0;
+`;
 
-        </StyledSigns>
+function getSignsByLanguage(language: 'EN' | 'HI') {
+    switch (language) {
+        case "EN":
+            return allSigns;
+        case "HI":
+            return allSigns_hi;
+        default:
+            return allSigns;
+    }
+}
+
+export default function Signs() {
+    const [useEnglish, setUseEnglish] = useState(true);
+
+    return (
+        <>
+            {/*<div className="search-bar">*/}
+            {/*    <input type="text" placeholder="search..." className="search-input"/>*/}
+            {/*</div>*/}
+            <StyledLanguageControl className="language-control control">
+                Hindi
+                <Toggle defaultChecked={useEnglish}
+                        onChange={() => setUseEnglish(!useEnglish)}/>
+                English
+            </StyledLanguageControl>
+            <StyledSignsContainer>
+
+                {
+                    getSignsByLanguage(useEnglish ? 'EN' : 'HI')
+                        .signs
+                        .map((sign: SignT, index: number) => {
+                            return <div className={"sign"} key={`sign-${index}-${sign.signName}`}>
+                                <img
+                                    src={`img/${index + 1}.png`}
+                                    alt={sign.signDescription}
+                                    title={sign.signDescription}/>
+                                {sign.signCaption.length > 0 && <StyledCaption>{sign.signCaption}</StyledCaption>}
+                                {sign.signDescription.length > 0 &&
+                                <p className="description">{sign.signDescription}</p>}
+                            </div>;
+                        })
+                }
+
+            </StyledSignsContainer>
+        </>
     );
 
 }

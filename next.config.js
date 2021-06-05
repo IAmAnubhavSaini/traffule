@@ -5,4 +5,5 @@ module.exports = {
     },
     basePath: '/traffule',
     assetPrefix: '/traffule/',
+    port: 5000
 };
