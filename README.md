@@ -4,7 +4,7 @@ Traffic rules application
 
 ## Timeline
 
-2011-2021; a decade long dormant application.
+2011-2022; a decade long dormant application.
 
 ## License
 
