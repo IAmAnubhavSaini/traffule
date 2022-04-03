@@ -1,2 +1,0 @@
-# traffule
-TrafficRules related application.
