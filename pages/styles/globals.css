@@ -142,7 +142,6 @@ ol.hz li a {
     line-height: 40px;
     padding: .3rem;
     width: 100%;
-    border: none;
     border: thin solid var(--accent);
 }
 

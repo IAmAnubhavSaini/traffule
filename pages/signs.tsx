@@ -6,59 +6,32 @@ import Toggle from 'react-toggle';
 
 const StyledSignsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
-  grid-gap: 2vw;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 50px 100px;
   text-align: center;
-
-  @media (max-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  @media (max-width: 800px) {
-    grid-template-columns: 1fr 1fr;
-  }
-
+  min-height: 100vh;
+  margin: 100px;
+  
   div.sign {
-    text-align: center;
-    border: thin solid var(--black);
-    padding: .2vh .2vw;
-    counter-increment: signs;
-    position: relative;
-
-    &::before {
-      content: counter(signs);
-      background-color: black;
-      color: white;
-      width: 2vw;
-      display: inline-block;
-      top: -1vh;
-      position: relative;
-      border: thin solid black;
-      border-radius: 0 0 50% 50%;
-      padding: 1vh 0;
-      z-index: 100;
-    }
+    min-height: 400px;
   }
-
+  
   img {
-    display: block;
-    min-height: 200px;
-    height: 20vh;
-    margin: 3vh 1vw;
-    padding: 1vh 1vw;
+    height: 200px;
   }
 
-  p.description {
-    text-align: left;
-  }
 `;
 
 const StyledCaption = styled.div`
-  padding: 1vh 0;
+  margin-top: 10px;
+  padding: 20px 0;
   width: 100%;
-  font-size: 1rem;
+  font-size: 20px;
   background-color: var(--black);
   color: var(--white);
+  text-shadow: 1px 1px 1px #000;
   font-weight: bold;
+  border-radius: 8px;
 `;
 
 const StyledLanguageControl = styled.div`
